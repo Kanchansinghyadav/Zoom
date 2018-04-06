@@ -26,7 +26,7 @@ print("\n\n\n\t\t\t*****White hats never do Illegel Things and They never leave 
 
 
 
-print ("\t\tWORKS ONLY ON WESITES HAVING EXPOSED WP-JSON API\n\n")
+
 
 if args.url:
 	url = args.url # args.url contains value of -u option
