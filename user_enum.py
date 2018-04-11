@@ -10,13 +10,13 @@ args = parser.parse_args() # Parsing the arguments
 users = [] # List for storing found usernames
 
 def manual(url):
-	print 'Scan Started' 
+	print ('Scan Started' )
 	for number in range(0, 9999):
 		response = requests.get(url + '/?d3v=x&author=' + str(number)).text # Makes request to webpage
 		match = re.search(r'/author/[^<]*/', response) # Regular expression to extract username
 		if match:
 			username = match.group().split('/author/')[1][:-4] # Taking what we need from the regex match
-			print username.replace('/feed', '') # Print the username without '/feed', if present
+			print (username.replace('/feed', '')) # Print the username without '/feed', if present
 			users.append(username) # Appending the username to users list
 		
 print("\n\n\t\t\t***********Disclaimer*************\n\n use this script on those targets on which you have permission, the creator is not resposible for any harm done by the one using this script\n\n ")
